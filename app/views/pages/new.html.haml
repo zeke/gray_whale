@@ -1,0 +1,4 @@
+%h2 New page
+= render :partial => "form", :locals => {:page => @page}
+%ul
+  %li= link_to 'Back', pages_path

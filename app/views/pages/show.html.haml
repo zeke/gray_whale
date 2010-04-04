@@ -1,0 +1,18 @@
+%h2= "Page \"#{@page.to_param}\""
+- content_tag_for :div, @page do
+  %ul
+    %li
+      %strong Title:
+      =h @page.title
+    %li
+      %strong Tagline:
+      =h @page.tagline
+    %li
+      %strong Body:
+      =h @page.body
+    %li
+      %strong Position:
+      =h @page.position
+%ul
+  %li= link_to 'Edit', edit_page_path(@page)
+  %li= link_to 'Back', pages_path

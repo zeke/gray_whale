@@ -1,0 +1,915 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (29.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (136.6ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (375.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20100404052811)
+  [4;36;1mSQL (120.2ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `tagline` text, `body` text, `position` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (19.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100404052811')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (36.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:28:48) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:29:06) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+
+NoMethodError (undefined method `paginate' for #<Class:0x103390ec8>):
+  app/controllers/pages_controller.rb:36:in `index'
+
+Rendered rescues/_trace (138.2ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:30:18) [GET]
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+
+ActionView::MissingTemplate (Missing template pages/index.erb in view path app/views):
+  app/controllers/pages_controller.rb:37:in `index'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:31:35) [GET]
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 89ms (View: 79, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:31:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:32:07) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#new (for 127.0.0.1 at 2010-04-04 00:32:10) [GET]
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering pages/new
+Rendered pages/_form (99.1ms)
+Completed in 129ms (View: 117, DB: 2) | 200 OK [http://localhost/pages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:32:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#create (for 127.0.0.1 at 2010-04-04 00:33:11) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"GZaxzj3ZqLQIKAHN0FGHcyDLadseSo9RjkfbuLtc0XY=", "page"=>{"position"=>"1", "body"=>"Founded in 2007, Gray Whale uses quantitative methods to identify trading opportunities, both domestically and internationally, across various financial instruments including stocks, futures, currencies, and options.\r\n\r\nOur culture is one of disciplined risk taking and continuous incremental improvement.", "title"=>"Who We Are", "tagline"=>"Gray Whale is a proprietary trading firm located in Santa Barbara, California."}}
+  [4;35;1mPage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`position`, `created_at`, `title`, `body`, `updated_at`, `tagline`) VALUES(1, '2010-04-04 05:33:11', 'Who We Are', 'Founded in 2007, Gray Whale uses quantitative methods to identify trading opportunities, both domestically and internationally, across various financial instruments including stocks, futures, currencies, and options.\r\n\r\nOur culture is one of disciplined risk taking and continuous incremental improvement.', '2010-04-04 05:33:11', 'Gray Whale is a proprietary trading firm located in Santa Barbara, California.')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages/1
+Completed in 20ms (DB: 2) | 302 Found [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-04-04 00:33:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (18.6ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 50ms (View: 20, DB: 20) | 200 OK [http://localhost/pages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:11) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:33:14) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (17.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (29.4ms)
+Completed in 49ms (View: 22, DB: 18) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:33:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:34:01) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mPage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (8.5ms)
+Completed in 23ms (View: 11, DB: 2) | 200 OK [http://localhost/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#new (for 127.0.0.1 at 2010-04-04 00:34:21) [GET]
+  [4;35;1mPage Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering pages/new
+Rendered pages/_form (8.5ms)
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/pages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#create (for 127.0.0.1 at 2010-04-04 00:34:42) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"GZaxzj3ZqLQIKAHN0FGHcyDLadseSo9RjkfbuLtc0XY=", "page"=>{"position"=>"2", "body"=>"Our trading is predominantly electronic, and either automated or semi-automated.  As a result, we use considerable resources to develop and refine our own internal proprietary trading systems.\r\nIn spite of the importance of technology, we feel that a key driver of our firm’s success is the people who work here.  Each day we strive to innovate, improve, and incrementally advance the capital and knowledge base of the firm.  The continued growth and success \r\nof Gray Whale is the direct result of these cumulative efforts.", "title"=>"What We Do", "tagline"=>"The trading at Gray Whale is quantitative and focuses on mathematical expectancy."}}
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.3ms)[0m   [0mINSERT INTO `pages` (`position`, `created_at`, `title`, `body`, `updated_at`, `tagline`) VALUES(2, '2010-04-04 05:34:42', 'What We Do', 'Our trading is predominantly electronic, and either automated or semi-automated. As a result, we use considerable resources to develop and refine our own internal proprietary trading systems.\r\nIn spite of the importance of technology, we feel that a key driver of our firm’s success is the people who work here. Each day we strive to innovate, improve, and incrementally advance the capital and knowledge base of the firm. The continued growth and success \r\nof Gray Whale is the direct result of these cumulative efforts.', '2010-04-04 05:34:42', 'The trading at Gray Whale is quantitative and focuses on mathematical expectancy.')[0m
+  [4;36;1mSQL (37.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages/2
+Completed in 56ms (DB: 39) | 302 Found [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-04-04 00:34:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.6ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 26ms (View: 8, DB: 3) | 200 OK [http://localhost/pages/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:34:44) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (8.5ms)
+Rendered pages/_page (3.2ms)
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#new (for 127.0.0.1 at 2010-04-04 00:34:47) [GET]
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering pages/new
+Rendered pages/_form (8.7ms)
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://localhost/pages/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:34:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#create (for 127.0.0.1 at 2010-04-04 00:35:27) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"GZaxzj3ZqLQIKAHN0FGHcyDLadseSo9RjkfbuLtc0XY=", "page"=>{"position"=>"3", "body"=>"In the same way, the future success of our firm will not depend on any one profitable trade but rather from the aggregation of thousands of small trades, across a growing number of strategies and markets.\r\nWe receive continuous feedback from the market through the results of each trading decision.  By being honest and self-critical, and encouraging open dialogue and debate, we are able to assimilate new information quickly and adapt our strategies accordingly.", "title"=>"Philosophy", "tagline"=>"Whales are among the largest animals on the planet.  However, they attain their great size gradually through the consumption of miniscule plankton."}}
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.3ms)[0m   [0;1mINSERT INTO `pages` (`position`, `created_at`, `title`, `body`, `updated_at`, `tagline`) VALUES(3, '2010-04-04 05:35:27', 'Philosophy', 'In the same way, the future success of our firm will not depend on any one profitable trade but rather from the aggregation of thousands of small trades, across a growing number of strategies and markets.\r\nWe receive continuous feedback from the market through the results of each trading decision. By being honest and self-critical, and encouraging open dialogue and debate, we are able to assimilate new information quickly and adapt our strategies accordingly.', '2010-04-04 05:35:27', 'Whales are among the largest animals on the planet. However, they attain their great size gradually through the consumption of miniscule plankton.')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages/3
+Completed in 19ms (DB: 2) | 302 Found [http://localhost/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-04-04 00:35:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 109ms (View: 96, DB: 2) | 200 OK [http://localhost/pages/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:35:41) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (8.0ms)
+Rendered pages/_page (2.9ms)
+Rendered pages/_page (2.9ms)
+Completed in 29ms (View: 17, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#new (for 127.0.0.1 at 2010-04-04 00:35:44) [GET]
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering pages/new
+Rendered pages/_form (8.1ms)
+Completed in 108ms (View: 13, DB: 1) | 200 OK [http://localhost/pages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#create (for 127.0.0.1 at 2010-04-04 00:36:05) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"GZaxzj3ZqLQIKAHN0FGHcyDLadseSo9RjkfbuLtc0XY=", "page"=>{"position"=>"4", "body"=>"We pride ourselves on being a meritocracy, where responsibility, career advancement, and compensation are rewarded based on the skills and contributions of the individual.\r\nWe are extremely selective in our hiring in order to maintain the quality and culture of the firm.  We may review hundreds of resumes in order to make a single job offer.", "title"=>"Recruiting", "tagline"=>"Our firm is actively interested in hiring talented individuals, both for positions in trading as \r\nwell as technology. "}}
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Create (0.3ms)[0m   [0;1mINSERT INTO `pages` (`position`, `created_at`, `title`, `body`, `updated_at`, `tagline`) VALUES(4, '2010-04-04 05:36:05', 'Recruiting', 'We pride ourselves on being a meritocracy, where responsibility, career advancement, and compensation are rewarded based on the skills and contributions of the individual.\r\nWe are extremely selective in our hiring in order to maintain the quality and culture of the firm. We may review hundreds of resumes in order to make a single job offer.', '2010-04-04 05:36:05', 'Our firm is actively interested in hiring talented individuals, both for positions in trading as \r\nwell as technology. ')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages/4
+Completed in 19ms (DB: 2) | 302 Found [http://localhost/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-04-04 00:36:05) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.9ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 24ms (View: 10, DB: 2) | 200 OK [http://localhost/pages/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-04 00:36:23) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (8.4ms)
+Rendered pages/_page (2.8ms)
+Rendered pages/_page (3.4ms)
+Rendered pages/_page (88.6ms)
+Completed in 119ms (View: 107, DB: 2) | 200 OK [http://localhost/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#new (for 127.0.0.1 at 2010-04-04 00:36:25) [GET]
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendering template within layouts/application
+Rendering pages/new
+Rendered pages/_form (9.1ms)
+Completed in 26ms (View: 14, DB: 1) | 200 OK [http://localhost/pages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#create (for 127.0.0.1 at 2010-04-04 00:36:45) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"GZaxzj3ZqLQIKAHN0FGHcyDLadseSo9RjkfbuLtc0XY=", "page"=>{"position"=>"5", "body"=>"27 W Anapamu no.138\r\nSanta Barbara, CA 93101\r\n\r\n805-889-9988 \r\n\r\ntrameson@graywhalecapital.com\r\nmchallen@graywhalecapital.com", "title"=>"Contact", "tagline"=>""}}
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Create (0.2ms)[0m   [0mINSERT INTO `pages` (`position`, `created_at`, `title`, `body`, `updated_at`, `tagline`) VALUES(5, '2010-04-04 05:36:45', 'Contact', '27 W Anapamu no.138\r\nSanta Barbara, CA 93101\r\n\r\n805-889-9988 \r\n\r\ntrameson@graywhalecapital.com\r\nmchallen@graywhalecapital.com', '2010-04-04 05:36:45', '')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages/5
+Completed in 19ms (DB: 2) | 302 Found [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#show (for 127.0.0.1 at 2010-04-04 00:36:45) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering pages/show
+Completed in 25ms (View: 10, DB: 3) | 200 OK [http://localhost/pages/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 00:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-04 00:38:53) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 298ms (View: 286, DB: 2) | 200 OK [http://localhost/pages.json]
