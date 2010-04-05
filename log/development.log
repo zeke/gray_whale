@@ -913,3 +913,315 @@ Processing PagesController#index to json (for 127.0.0.1 at 2010-04-04 00:38:53) 
   [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
   [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
 Completed in 298ms (View: 286, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:20:38) [GET]
+Rendering template within layouts/application
+Rendering static/index
+
+ActionView::TemplateError (undefined method `swf' for #<ActionView::Base:0x1036194b0>) on line #1 of app/views/static/index.html.haml:
+1: = swf 'swf/graywhale.swf', :width => 500, :height => 500
+
+    app/views/static/index.html.haml:1:in `_run_haml_app47views47static47index46html46haml'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (78.7ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:23:02) [GET]
+Rendering template within layouts/application
+Rendering static/index
+
+ActionView::TemplateError (undefined method `swf' for #<ActionView::Base:0x1036e8698>) on line #1 of app/views/static/index.html.haml:
+1: = swf 'swf/graywhale.swf', :width => 500, :height => 500
+
+    app/views/static/index.html.haml:1:in `_run_haml_app47views47static47index46html46haml'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (79.8ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:23:05) [GET]
+Rendering template within layouts/application
+Rendering static/index
+
+ActionView::TemplateError (undefined method `swf' for #<ActionView::Base:0x1033503a0>) on line #1 of app/views/static/index.html.haml:
+1: = swf 'swf/graywhale.swf', :width => 500, :height => 500
+
+    app/views/static/index.html.haml:1:in `_run_haml_app47views47static47index46html46haml'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.15) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (79.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:35:16) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 142ms (View: 138, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-04 14:35:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:56:36) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:57:59) [GET]
+Rendering static/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 14:59:48) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 90ms (View: 86, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:00:19) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:00:49) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:01:26) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:01:44) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:01:54) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:03:29) [GET]
+Rendering template within layouts/application
+Rendering static/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:03:40) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:03:57) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:05:38) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:09:56) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:10:15) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:10:49) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:11:07) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:11:33) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (15.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:12:54) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 4, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 15:14:11) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 67ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-04 16:39:16) [GET]
+  [4;36;1mPage Load (62.0ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (268.7ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 1895ms (View: 1476, DB: 331) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 17:35:20) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 17:35:53) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 17:36:00) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 17:36:16) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 20:24:45) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 20:25:24) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-04 20:54:02) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]

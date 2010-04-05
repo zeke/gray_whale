@@ -8,6 +8,7 @@ package {
 	import org.osflash.thunderbolt.Logger
 	import org.casalib.util.ObjectUtil
 	import org.casalib.util.ArrayUtil
+	import com.serialization.json.JSON
 	
   import com.graywhale.*
   import com.graywhale.logo.*
@@ -16,14 +17,16 @@ package {
 		
 		public var _footer:Footer
 		public var _spinner:Spinner
-		public var _page_json:Object
+		public var _pages_json:Object
+		public var _pages:Array = new Array()
+		public var _nav_links:Array = new Array()
 
 		public function Graywhale() {
       FV.process(this)
       configureStage()
 			showFooter()
       showSpinner()
-      // loadFeed()
+      loadFeed()
 		}
 
 		private function configureStage() {
@@ -43,45 +46,37 @@ package {
       addChild(_footer)
 	  }
 	
-    // Tell all child clips to adjust to resized stage
+    // Tell child clips to adjust to resized stage
 		function resizeHandler(event:Event) {
-      // var child = null
-      // for (var i=0; i<numChildren; i++) {
-      //   child = getChildAt(i)
-      //   child.adaptToScale()
-      // }
 			_footer.adaptToScale();
 		}
 	
-		// private function loadFeed() {
-		// 	var loader:URLLoader = new URLLoader()
-		// 	loader.addEventListener(Event.COMPLETE, loadImages)
-		// 	loader.load(new URLRequest(FV.get.feed_url))
-		// }
+		private function loadFeed() {
+			var loader:URLLoader = new URLLoader()
+			loader.addEventListener(Event.COMPLETE, generatePagesAndNav)
+			loader.load(new URLRequest(FV.get.pages_json_url))
+		}
 						
-			//     private function loadImages(event:Event):void {
-			// _images_json = JSON.deserialize(event.target.data as String)
-			// 
-			// // Pull keys from the object (in case we need to randomize their order)
-			// var keys = ObjectUtil.getKeys(_images_json)
-			// 
-			// // Randomize the image order?
-			// Logger.debug("randomize_order: " + FV.get.randomize_order)
-			// if (FV.get.randomize_order) keys = randomizeArray(keys)
-			// 
-			// var image_id = 0
-			// for (var i=0; i<keys.length; i++){
-			// 	var key = keys[i]
-			// 	// Only create images if they're wide enough to fill the stage
-			// 	var image_json = _images_json[key]
-			// 	if (Number(image_json[FV.get.image_size+"_width"]) > stage.stageWidth) {
-			// 		var image:Image = new Image(image_id, image_json)
-			// 		this.addChild(image)
-			// 		_images.push(image)
-			// 		image_id++
-			// 	}				
-			// }
-			//     }
+		private function generatePagesAndNav(event:Event):void {
+			_spinner.fadeOut()
+			_pages_json = JSON.deserialize(event.target.data as String)	
+			var keys = ObjectUtil.getKeys(_pages_json)
+			var page_id = 0
+			for (var i=0; i<keys.length; i++){
+				var key = keys[i]
+				var page_json = _pages_json[key]['page']
+
+				var nav_link:NavLink = new NavLink(page_id, page_json)
+				this.addChild(nav_link)
+				_nav_links.push(nav_link)
+
+				var page:Page = new Page(page_id, page_json)
+				this.addChild(page)
+				_pages.push(page)				
+				
+				page_id++
+			}
+		}
 		
 	}
 }

@@ -18,7 +18,7 @@ package com.graywhale {
 			// Set string defaults
 			var strings:Object = {
         // base_url:"http://localhost:3000",
-				feed_url:"http://gray-whale.heroku.com/pages.json"
+				pages_json_url:"http://gray-whale.heroku.com/pages.json"
 			}
 
 			// Set boolean defaults
@@ -30,10 +30,27 @@ package com.graywhale {
 				dot_color_1: 0x8DC63F, // green
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
-				footer_stripe_1_color: 0xC6C7C8,
-				footer_stripe_1_height: 40,
-				footer_stripe_2_color: 0xDEDFDF,
-				footer_stripe_2_height: 20,
+				padding_left: 100,
+				page_width: 500,
+				page_margin_top: 100,
+				page_title_padding_bottom: 20,
+				page_tagline_padding_bottom: 20,
+				page_title_color: 0x00AEEF, // blue
+				page_title_text_size: 50,
+				page_tagline_color: 0x939598, // grey
+				page_tagline_text_size: 24,
+				page_body_color: 0x9D9FA2, // grey
+				page_body_text_size: 15,
+				page_fadeout_time: .5,
+				page_fadein_time: 1.5,
+				nav_margin_top: 100,
+				nav_margin_left: 50,
+				nav_link_width: 200,
+				nav_link_margin_bottom: 8,
+				nav_link_text_size: 15,
+				nav_link_color: 0x000000,
+				nav_link_alpha_active: .8,
+				nav_link_alpha_inactive: .2,
 				footer_dot_count: 15,
 				footer_dot_radius: 3,
 				footer_dot_y_range: 50,
@@ -41,7 +58,13 @@ package com.graywhale {
 				footer_dot_speed_max: .8,
 				footer_y_target_update_probability: 30,
 				footer_dot_y_transition_time_min: 3,
-				footer_dot_y_transition_time_max: 5
+				footer_dot_y_transition_time_max: 5,
+				footer_stripe_1_color: 0xDFDFDF,
+				footer_stripe_1_height: 30,
+				footer_stripe_2_color: 0xCCCCCC,
+				footer_stripe_2_height: 15,
+				footer_stripe_3_color: 0xAAAAAA,
+				footer_stripe_3_height: 20
       }
 
       var temp:Object = [];

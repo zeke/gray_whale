@@ -31,7 +31,7 @@ package com.graywhale {
       rotation += 25
     }
     
-    function fadeOut() {
+    public function fadeOut() {
 			if (visible) Tweener.addTween(this, {alpha:0, time:2, transition:"easeOutCubic", onComplete:hide})	
     }
     
