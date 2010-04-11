@@ -28,7 +28,39 @@ package {
       showSpinner()
       loadFeed()
 		}
+		
+		
+		public function showPage(id) {
 
+			// Iterate over NavLinks
+			for each (var nav_link in _nav_links) {
+				if (nav_link._id == id) {
+					nav_link.activate()
+				} else {
+					nav_link.deactivate()
+				}
+			}
+			
+			// Delay appearance of page if another page needs to fade out first
+			var delay_page_appearance = false
+			for each (var page in _pages) {
+				if (page._active) {
+					delay_page_appearance = true
+					break
+				}
+			}
+			
+			// Iterate over Pages
+			for each (page in _pages) {
+				if (page._id == id) {
+					page.activate(delay_page_appearance)
+				} else {
+					page.deactivate()
+				}
+			}
+			
+		}
+		
 		private function configureStage() {
       stage.align = StageAlign.TOP_LEFT
       stage.scaleMode = StageScaleMode.NO_SCALE

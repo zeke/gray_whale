@@ -77,7 +77,7 @@ package com.graywhale {
 		}
 
 		private function releaseHandler(event:SimpleMouseEvent):void {
-			activate()
+			Graywhale(this.parent).showPage(_id)
 		}
 
 		public function activate() {
@@ -86,8 +86,10 @@ package com.graywhale {
 		}
 
 		public function deactivate() {
-			_active = false
-			deemphasize()
+			if (_active) {
+				_active = false
+				deemphasize()
+			}
 		}
 		
 		public function emphasize() {

@@ -17,8 +17,8 @@ package com.graywhale {
 			
 			// Set string defaults
 			var strings:Object = {
-        // base_url:"http://localhost:3000",
-				pages_json_url:"http://gray-whale.heroku.com/pages.json"
+				// pages_json_url:"http://gray-whale.heroku.com/pages.json"
+				pages_json_url:"http://localhost:3000/pages.json"
 			}
 
 			// Set boolean defaults
@@ -30,19 +30,20 @@ package com.graywhale {
 				dot_color_1: 0x8DC63F, // green
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
-				padding_left: 100,
+				page_margin_left: 250,
 				page_width: 500,
-				page_margin_top: 100,
+				page_margin_top: 70,
 				page_title_padding_bottom: 20,
 				page_tagline_padding_bottom: 20,
 				page_title_color: 0x00AEEF, // blue
-				page_title_text_size: 50,
+				page_title_text_size: 40,
 				page_tagline_color: 0x939598, // grey
 				page_tagline_text_size: 24,
 				page_body_color: 0x9D9FA2, // grey
 				page_body_text_size: 15,
-				page_fadeout_time: .5,
-				page_fadein_time: 1.5,
+				page_appear_delay: .5,
+				page_appear_time: 1,
+				page_disappear_time: .5,
 				nav_margin_top: 100,
 				nav_margin_left: 50,
 				nav_link_width: 200,

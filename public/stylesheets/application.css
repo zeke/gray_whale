@@ -1,19 +1,66 @@
-html {
-  height: 100%;
-  overflow: hidden; }
-
 body {
-  height: 100%;
   text-align: center;
   font-family: "Lucida Grande", Verdana;
-  margin: 0;
-  padding: 0; }
-
-h1 {
-  border-bottom: 1px #000 solid;
-  padding-bottom: 5px; }
+  font-size: 80%; }
 
 #wrapper {
   width: 800px;
   text-align: left;
   margin: auto; }
+
+.heading_with_menu {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  margin: 15px 0 0px 0;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: .5em; }
+  .heading_with_menu.master {
+    margin-bottom: 20px;
+    border-bottom: none; }
+  .heading_with_menu h1, .heading_with_menu h2, .heading_with_menu h3, .heading_with_menu h4, .heading_with_menu h5, .heading_with_menu h6 {
+    float: left;
+    margin: 0;
+    padding: 0; }
+    .heading_with_menu h1 span, .heading_with_menu h2 span, .heading_with_menu h3 span, .heading_with_menu h4 span, .heading_with_menu h5 span, .heading_with_menu h6 span {
+      color: #CCC;
+      font-style: italic; }
+  .heading_with_menu ol, .heading_with_menu ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none; }
+    .heading_with_menu ol li, .heading_with_menu ul li {
+      float: left;
+      padding: 0 10px;
+      border-right: 1px solid #DDD;
+      color: #666666; }
+      .heading_with_menu ol li.first, .heading_with_menu ul li.first {
+        padding-left: 0; }
+      .heading_with_menu ol li.last, .heading_with_menu ul li.last {
+        padding-right: 0;
+        border-right: none; }
+      .heading_with_menu ol li a, .heading_with_menu ul li a {
+        outline: none;
+        color: #666666;
+        text-decoration: none; }
+        .heading_with_menu ol li a:hover, .heading_with_menu ol li a.active, .heading_with_menu ul li a:hover, .heading_with_menu ul li a.active {
+          text-decoration: underline; }
+        .heading_with_menu ol li a.active, .heading_with_menu ul li a.active {
+          font-weight: bold; }
+
+p {
+  margin: 0; }
+
+form div.input label {
+  margin-top: 15px;
+  display: block;
+  clear: both;
+  color: #666; }
+form div.input input, form div.input textarea {
+  font-size: .9em;
+  font-family: "Lucida Grande";
+  width: 100%; }
+form div.input textarea {
+  height: 200px; }

@@ -1,17 +1,10 @@
-- content_tag_for :div, page do
-  %ul
-    %li
-      %strong Title:
-      =h page.title
-    %li
-      %strong Tagline:
-      =h page.tagline
-    %li
-      %strong Body:
-      =h page.body
-    %li
-      %strong Position:
-      =h page.position
-    = link_to 'Show', page
-    = link_to 'Edit', edit_page_path(page)
-    = link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete
+%div.heading_with_menu
+  %h3
+    = page.title
+    %span= "(#{page.position})"
+  
+  %ol
+    %li.first= link_to 'Edit', edit_page_path(page)
+    %li.last= link_to 'Delete', page, :confirm => 'Are you sure?', :method => :delete
+    
+%p= page.body

@@ -1,6 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :pages
 
+  map.connect 'admin', :controller => 'admin', :action => 'login'
+  map.connect 'login', :controller => 'admin', :action => 'login'
+  map.connect 'logout', :controller => 'admin', :action => 'logout'
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

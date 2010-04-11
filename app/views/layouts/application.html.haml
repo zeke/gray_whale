@@ -9,6 +9,13 @@
 
   %body
     #wrapper
-      #content
-        %h1 Gray Whale Admin
+      #content        
+
+        %div.heading_with_menu.master
+          %h1 Gray Whale Admin
+
+          %ol
+            %li.first= link_to 'List pages', pages_path
+            %li.last= link_to 'New page', new_page_path
+        
         = yield

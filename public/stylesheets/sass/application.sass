@@ -1,19 +1,69 @@
-html
-  height: 100%
-  overflow: hidden
-
 body
-  height: 100%
   :text-align center
   :font-family "Lucida Grande", Verdana
-  :margin 0
-  :padding 0
-
-h1
-  :border-bottom 1px #000 solid
-  :padding-bottom 5px
+  :font-size 80%
 
 #wrapper
   :width 800px
   :text-align left
   :margin auto
+  
+.heading_with_menu
+  float: none
+  clear: both
+  overflow: hidden
+  margin: 15px 0 0px 0
+  border-bottom: 1px solid #CCC
+  padding-bottom: .5em
+  &.master
+    margin-bottom: 20px
+    border-bottom: none
+
+  h1,h2,h3,h4,h5,h6
+    float: left
+    margin: 0
+    padding: 0
+    span
+      color: #CCC
+      font-style: italic
+  ol,ul
+    float: right
+    margin: 0
+    padding: 0
+    list-style: none
+    list-style-type: none
+    li
+      float: left
+      padding: 0 10px
+      border-right: 1px solid #DDD
+      color = #666
+      &.first
+        padding-left: 0
+      &.last
+        padding-right: 0
+        border-right: none
+      a
+        outline: none
+        color = #666
+        text-decoration: none
+        &:hover, &.active
+          text-decoration: underline
+        &.active
+          font-weight: bold
+          
+p
+  margin: 0
+
+form
+  div.input
+    label
+      margin-top: 15px
+      display: block
+      clear: both
+      color: #666
+    input, textarea
+      font-size: .9em
+      font-family: "Lucida Grande"
+      width: 100%
+    textarea
+      height: 200px

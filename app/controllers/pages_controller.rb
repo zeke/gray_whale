@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :authenticate, :except => [:index]
   before_filter :find_page
-
-  PAGES_PER_PAGE = 20
 
   def create
     @page = Page.new(params[:page])

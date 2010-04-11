@@ -15,6 +15,7 @@ package com.graywhale {
 		public var _title
 		public var _tagline
 		public var _body
+		public var _active:Boolean = false
 		
 		public function Page(id, json) {
 			name = "page_" + id
@@ -78,6 +79,7 @@ package com.graywhale {
 			format.size = FV.get.page_body_text_size
 			format.letterSpacing = 0
 			format.bold = false
+      format.leading = 5
 
 		  var l = _body = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
@@ -92,27 +94,31 @@ package com.graywhale {
     }
 
 		public function adaptToScale() {
-			x = FV.get.padding_left
+			x = FV.get.page_margin_left
 			y = FV.get.page_margin_top
 			_tagline.y = _title.y + _title.height + FV.get.page_title_padding_bottom
 			_body.y = _tagline.y + _tagline.height + FV.get.page_tagline_padding_bottom
 		}
-		
-    public function fadeOut() {
-			if (visible) Tweener.addTween(this, {alpha:0, time:FV.get.page_fadeout_time, transition:"easeOutCubic", onComplete:hide})	
-    }
-
-    public function fadeIn() {
-			if (!visible) {
-				visible = true
-				alpha = 0
-				Tweener.addTween(this, {alpha:1, time:FV.get.page_fadein_time, transition:"easeInCubic"})	
-			} 
-    }
-    
+		    
     function hide() {
+			alpha = 0
       visible = false
     }
+
+		public function activate(delay_page_appearance) {
+			if (delay_page_appearance==undefined) delay_page_appearance=false
+			visible = true
+			_active = true
+			var d = delay_page_appearance ? FV.get.page_appear_delay : 0
+      Tweener.addTween(this, {alpha:1, time:FV.get.page_appear_time, delay:d, transition:"linear"})
+		}
+
+		public function deactivate() {
+			if (_active) {
+				_active = false
+      	Tweener.addTween(this, {alpha:0, time:FV.get.page_disappear_time, transition:"linear", onComplete:hide})
+			}
+		}
 
 	}
 }
