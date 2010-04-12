@@ -43,7 +43,7 @@ package com.graywhale.logo {
      	t.start()
 
 			// Set up delay for appearance of logo text
-     	var t2 = new Timer((endZoomDelay+FV.get.logo_end_zoom_time-.25)*1000, 1)
+     	var t2 = new Timer((endZoomDelay)*1000, 1)
      	t2.addEventListener(TimerEvent.TIMER_COMPLETE, addLabelAndCapital)
      	t2.start()
     }

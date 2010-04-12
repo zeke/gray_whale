@@ -5,8 +5,10 @@ package com.graywhale {
   import flash.text.*
 
   import de.popforge.events.*
-	import caurina.transitions.Tweener
 	import org.osflash.thunderbolt.Logger
+	import caurina.transitions.Tweener
+  import caurina.transitions.properties.FilterShortcuts
+  FilterShortcuts.init()
 
 	public class Page extends MovieClip {
 
@@ -59,6 +61,7 @@ package com.graywhale {
 			format.size = FV.get.page_tagline_text_size
 			format.letterSpacing = 0
 			format.bold = false
+			format.leading = 4
 
 		  var l = _tagline = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
@@ -94,16 +97,25 @@ package com.graywhale {
     }
 
 		public function adaptToScale() {
-			x = FV.get.page_margin_left
-			y = FV.get.page_margin_top
-			_tagline.y = _title.y + _title.height + FV.get.page_title_padding_bottom
-			_body.y = _tagline.y + _tagline.height + FV.get.page_tagline_padding_bottom
+			x = FV.get.page_x
+			y = FV.get.page_y
+
+			// Account for spacing when no tagline is present
+			if (_json['tagline'] == "") {
+				_tagline.visible = false
+				_body.y = _title.y + _title.height + FV.get.page_title_padding_bottom
+			} else {
+				_tagline.y = _title.y + _title.height + FV.get.page_title_padding_bottom
+				_body.y = _tagline.y + _tagline.height + FV.get.page_tagline_padding_bottom	
+			}
+			
 		}
 		    
     function hide() {
 			alpha = 0
       visible = false
 			adaptToScale()
+			Tweener.addTween(this, {_Blur_blurX:FV.get.page_blur_x, _Blur_blurY:FV.get.page_blur_y})
     }
 
 		public function activate(delay_page_appearance) {
@@ -111,23 +123,53 @@ package com.graywhale {
 			visible = true
 			_active = true
 			var d = delay_page_appearance ? FV.get.page_appear_delay : 0
-      Tweener.addTween(this, {alpha:1, time:FV.get.page_appear_time, delay:d, transition:"linear"})
+
+			// Fade in
+      Tweener.addTween(this, {
+				alpha: 1,
+				time: FV.get.page_appear_time,
+				delay: d,
+				transition:"linear"
+			})
+			
+			// un-blur and slide in from the left
+			x = FV.get.page_x - FV.get.page_x_shift
+			Tweener.addTween(this, {
+				x: FV.get.page_x,
+				_Blur_blurX: 0,
+				_Blur_blurY: 0,
+				time: FV.get.page_appear_time,
+				delay: d,
+				transition: "easeOutCubic"
+			})
+
 		}
 
 		public function deactivate() {
 			if (_active) {
 				_active = false
+				
+				// Fade out
       	Tweener.addTween(this, {
 					alpha:0, 
 					time:FV.get.page_disappear_time, 
-					transition:"linear"
+					transition:"easeInCubic"
 				})
 				
-      	Tweener.addTween(this, {
-					x: this.x+300, 
-					time:FV.get.page_disappear_time+.2,
-					transition:"easeInCubic",
-					onComplete:hide
+				// Blur
+				Tweener.addTween(this, {
+					_Blur_blurX: FV.get.page_blur_x,
+					_Blur_blurY: FV.get.page_blur_y,
+					time: FV.get.page_disappear_time,
+					transition:"easeOutCubic"
+				})
+
+				// Slide to the right
+				Tweener.addTween(this, {
+					x: FV.get.page_x + FV.get.page_x_shift, 
+					time: FV.get.page_disappear_time,
+					transition: "easeInCubic",
+					onComplete: hide
 				})
 
 			}

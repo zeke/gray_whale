@@ -112,7 +112,7 @@ package com.graywhale {
 				alpha: FV.get.nav_link_alpha_inactive, 
 				time: FV.get.nav_link_appear_time,
 				transition: "easeInCubic",
-				delay: _id * FV.get.nav_link_appear_delay
+				delay: (_id * FV.get.nav_link_appear_delay_interval) + FV.get.nav_link_appear_delay
 			})			
 		}
 
