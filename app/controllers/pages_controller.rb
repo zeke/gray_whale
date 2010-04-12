@@ -8,7 +8,7 @@ class PagesController < ApplicationController
     respond_to do |format|
       if @page.save
         flash[:notice] = 'Page was successfully created.'
-        format.html { redirect_to @page }
+        format.html { redirect_to pages_path }
         format.xml  { render :xml => @page, :status => :created, :location => @page }
       else
         format.html { render :action => "new" }
@@ -36,7 +36,7 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @pages }
-      format.json { render :json => @pages }
+      format.json { render :json => @pages.to_json(:methods => :html_body) }
     end
   end
 
@@ -62,7 +62,7 @@ class PagesController < ApplicationController
     respond_to do |format|
       if @page.update_attributes(params[:page])
         flash[:notice] = 'Page was successfully updated.'
-        format.html { redirect_to @page }
+        format.html { redirect_to pages_path }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

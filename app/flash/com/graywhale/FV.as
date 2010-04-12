@@ -30,9 +30,25 @@ package com.graywhale {
 				dot_color_1: 0x8DC63F, // green
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
-				page_margin_left: 250,
+
+				logo_dot_radius:2,
+				logo_dot_appear_time: 1,
+				logo_dot_appear_delay_interval:.5,
+				logo_curve_appear_time: 2,
+				logo_curve_appear_delay: .5,
+				logo_zoomed_hangout_time: .5,
+				logo_end_zoom_time: 1,
+				logo_x: 20,
+				logo_y: 20,
+
+				logo_label_appear_time: 2,
+				logo_label_appear_delay: 0,
+				logo_capital_appear_time: 2,
+				logo_capital_appear_delay: 1,
+				
+				page_margin_left: 450,
 				page_width: 500,
-				page_margin_top: 70,
+				page_margin_top: 20,
 				page_title_padding_bottom: 20,
 				page_tagline_padding_bottom: 20,
 				page_title_color: 0x00AEEF, // blue
@@ -43,15 +59,19 @@ package com.graywhale {
 				page_body_text_size: 15,
 				page_appear_delay: .5,
 				page_appear_time: 1,
-				page_disappear_time: .5,
+				page_disappear_time: .3,
+				
 				nav_margin_top: 100,
-				nav_margin_left: 50,
-				nav_link_width: 200,
+				// nav_margin_left: 50,
+				nav_right_edge: 300,
 				nav_link_margin_bottom: 8,
 				nav_link_text_size: 15,
 				nav_link_color: 0x000000,
-				nav_link_alpha_active: .8,
-				nav_link_alpha_inactive: .2,
+				nav_link_alpha_active: .9,
+				nav_link_alpha_inactive: .4,
+				nav_link_appear_time: .5,
+				nav_link_appear_delay: .3,
+				
 				footer_dot_count: 15,
 				footer_dot_radius: 3,
 				footer_dot_y_range: 50,

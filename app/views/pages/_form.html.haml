@@ -4,7 +4,7 @@
 
   %div.input
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title, :class => "text"
   %div.input
     = f.label :tagline
     = f.text_area :tagline
@@ -13,6 +13,6 @@
     = f.text_area :body
   %div.input
     = f.label :position
-    = f.text_field :position
+    = f.text_field :position, :class => "text"
   %div.input
-    = f.submit "Submit"
+    = f.submit "Submit", :class => "submit"

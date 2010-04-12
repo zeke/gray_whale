@@ -39,32 +39,11 @@ package com.graywhale {
       visible = false
     }
     
+		// Top right of screen
     function position() {
       var padding = 20
-      
-      switch (FV.get.align_horizontal) {
-      case "left":
-        x = padding
-        break;
-      case "right":
-        x = stage.stageWidth - width - padding
-      break;
-      default: // center
-        x = stage.stageWidth/2 - width/2
-        break;
-      }
-      
-      switch (FV.get.align_vertical) {
-      case "top":
-        y = padding
-        break;
-      case "bottom":
-        y = stage.stageHeight - height - padding
-      break;
-      default: // middle
-        y = stage.stageHeight/2 - height/2
-        break;
-      }            
+      x = padding
+			y = stage.stageWidth - width - padding
     }
     
 	}

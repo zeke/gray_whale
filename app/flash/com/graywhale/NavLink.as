@@ -42,7 +42,7 @@ package com.graywhale {
     private function addBackground() {
       _bg = new Shape()
       _bg.graphics.beginFill(0x000000)
-      _bg.graphics.drawRect(0, 0, FV.get.nav_link_width, 20) // height will get updated
+      _bg.graphics.drawRect(0, 0, 20, 20) // width and height will get updated
       _bg.graphics.endFill()
       addChild(_bg)
 			_bg.alpha = 0
@@ -62,7 +62,6 @@ package com.graywhale {
 			l.multiline = false
 			l.wordWrap = false
       l.embedFonts = true
-      l.width = FV.get.nav_link_width
 			l.defaultTextFormat = format
 			l.htmlText = _json['title']
 			addChild(l)
@@ -101,14 +100,20 @@ package com.graywhale {
 		}
 
 		public function adaptToScale() {
-			_bg.height = _title.height
-			x = FV.get.nav_margin_left
+			_bg.width = _title.textWidth
+			_bg.height = _title.textHeight
+			x = FV.get.nav_right_edge - width
 			y = FV.get.nav_margin_top + (_id * (height+FV.get.nav_link_margin_bottom))
 		}
 		
 		private function appear() {
 			alpha = 0
-      Tweener.addTween(this, {alpha:FV.get.nav_link_alpha_inactive, time:1, transition:"linear", delay:_id*.3})			
+      Tweener.addTween(this, {
+				alpha: FV.get.nav_link_alpha_inactive, 
+				time: FV.get.nav_link_appear_time,
+				transition: "easeInCubic",
+				delay: _id * FV.get.nav_link_appear_delay
+			})			
 		}
 
 	}

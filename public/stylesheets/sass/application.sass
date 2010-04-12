@@ -3,6 +3,9 @@ body
   :font-family "Lucida Grande", Verdana
   :font-size 80%
 
+a
+  color = #00AEEF - #333
+  
 #wrapper
   :width 800px
   :text-align left
@@ -15,9 +18,7 @@ body
   margin: 15px 0 0px 0
   border-bottom: 1px solid #CCC
   padding-bottom: .5em
-  &.master
-    margin-bottom: 20px
-    border-bottom: none
+
 
   h1,h2,h3,h4,h5,h6
     float: left
@@ -44,26 +45,41 @@ body
         border-right: none
       a
         outline: none
-        color = #666
         text-decoration: none
         &:hover, &.active
           text-decoration: underline
         &.active
-          font-weight: bold
+          font-weight: bold          
+  &.master
+    margin-bottom: 20px
+    border-bottom: none
+    ol,ul
+      margin-top: 8px
           
 p
   margin: 0
 
 form
+  margin: 0 0 50px 0
   div.input
     label
       margin-top: 15px
       display: block
       clear: both
       color: #666
-    input, textarea
+    input.text, textarea
       font-size: .9em
       font-family: "Lucida Grande"
       width: 100%
     textarea
       height: 200px
+  input.button, input.submit
+    width: auto
+    margin: 20px 0 0 0
+    outline: none
+    border: 2px solid black
+    border-color = #00AEEF - #333    
+    padding: 4px 8px
+    background-color: #00AEEF
+    color: white
+    font-size: 1.2em

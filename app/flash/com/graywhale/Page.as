@@ -83,13 +83,13 @@ package com.graywhale {
 
 		  var l = _body = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
-		  l.selectable = true
+		  l.selectable = false
 			l.multiline = true
 			l.wordWrap = true
       l.embedFonts = true
       l.width = FV.get.page_width
 			l.defaultTextFormat = format
-			l.htmlText = _json['body']
+			l.htmlText = _json['html_body']
 			addChild(l)
     }
 
@@ -103,6 +103,7 @@ package com.graywhale {
     function hide() {
 			alpha = 0
       visible = false
+			adaptToScale()
     }
 
 		public function activate(delay_page_appearance) {
@@ -116,7 +117,19 @@ package com.graywhale {
 		public function deactivate() {
 			if (_active) {
 				_active = false
-      	Tweener.addTween(this, {alpha:0, time:FV.get.page_disappear_time, transition:"linear", onComplete:hide})
+      	Tweener.addTween(this, {
+					alpha:0, 
+					time:FV.get.page_disappear_time, 
+					transition:"linear"
+				})
+				
+      	Tweener.addTween(this, {
+					x: this.x+300, 
+					time:FV.get.page_disappear_time+.2,
+					transition:"easeInCubic",
+					onComplete:hide
+				})
+
 			}
 		}
 
