@@ -47,7 +47,7 @@ package com.graywhale {
 				logo_capital_appear_delay: .5,
 				
 				page_x: 400,
-				page_y: 30,
+				page_y: 34,
 				page_width: 500,
 				page_title_padding_bottom: 20,
 				page_tagline_padding_bottom: 20,
@@ -65,8 +65,7 @@ package com.graywhale {
 				page_x_shift: 50,
 				
 				nav_margin_top: 100,
-				// nav_margin_left: 50,
-				nav_right_edge: 300,
+				nav_right_edge: 308,
 				nav_link_margin_bottom: 8,
 				nav_link_text_size: 15,
 				nav_link_color: 0x000000,

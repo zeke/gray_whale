@@ -6,5 +6,7 @@
   %ol
     %li.first= link_to 'Edit', edit_page_path(page)
     %li.last= link_to 'Delete', page, :confirm => 'Are you sure?', :method => :delete
-    
-%p= page.body
+
+%p
+  %em= page.tagline
+  = page.body
