@@ -2,6 +2,7 @@ package {
 	import flash.display.*
 	import flash.events.*
 	import flash.net.*
+  import flash.utils.Timer
 
   import de.popforge.events.*
 	import caurina.transitions.Tweener
@@ -9,12 +10,14 @@ package {
 	import org.casalib.util.ObjectUtil
 	import org.casalib.util.ArrayUtil
 	import com.serialization.json.JSON
+  import net.wildwinter.Callback
 	
   import com.graywhale.*
   import com.graywhale.logo.*
 
 	public class Graywhale extends MovieClip {
 
+		public var _watermark:Watermark
 		public var _logo:Logo
 		public var _footer:Footer
 		public var _spinner:Spinner
@@ -27,13 +30,28 @@ package {
 		public function Graywhale() {
       FV.process(this)
       configureStage()
+			showWatermark()
 			showLogo()
       showSpinner()
       loadFeed()
 		}
 		
 		public function showPage(id) {
-
+			
+			// Delay actual appearance of page if logo needs to be moved over
+			// (first nav-click only)
+			if (_logo._in_splash_position) {
+				_logo.seekPostSplashPosition()
+				
+				// Delay is based on slide time of (second to) last NavLink to slide over 
+				var delay = FV.get.nav_post_splash_slide_time + (FV.get.nav_link_slide_delay_interval*(_nav_links.length-1))
+				var t = new Timer(delay*1000, 1)
+     		t.addEventListener(TimerEvent.TIMER_COMPLETE, Callback.create(actuallyShowPage,id))
+     		t.start()
+			} else {
+				actuallyShowPage(null, id)
+			}
+			
 			// Iterate over NavLinks
 			for each (var nav_link in _nav_links) {
 				if (nav_link._id == id) {
@@ -42,7 +60,11 @@ package {
 					nav_link.deactivate()
 				}
 			}
-			
+
+		}
+		
+		private function actuallyShowPage(e:Event=null, id:Number=0) {
+						
 			// Delay appearance of page if another page needs to fade out first
 			var delay_page_appearance = false
 			for each (var page in _pages) {
@@ -60,8 +82,12 @@ package {
 					page.deactivate()
 				}
 			}
-			
 		}
+		
+	  private function showWatermark() {
+			_watermark = new Watermark()
+      addChild(_watermark)
+	  }
 
 	  private function showLogo() {
 			_logo = new Logo()
@@ -88,6 +114,7 @@ package {
     // Tell child clips to adjust to resized stage
 		function resizeHandler(event:Event) {
 			_footer.adaptToScale()
+			_watermark.adaptToScale()
 			for each (var page in _pages) { page.adaptToScale() }
 			for each (var nav_link in _nav_links) { nav_link.adaptToScale() }
 		}

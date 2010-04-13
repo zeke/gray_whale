@@ -15,6 +15,7 @@ package com.graywhale {
 		public var _json:Object
 		public var _title
 		public var _active:Boolean = false
+		public var _in_splash_position:Boolean = true
 		
 		public function NavLink(id, json) {
 			name = "page_" + id
@@ -82,12 +83,28 @@ package com.graywhale {
 		public function activate() {
 			_active = true
 			emphasize()
+			seekPostSplashPosition()
 		}
 
 		public function deactivate() {
 			if (_active) {
 				_active = false
 				deemphasize()
+			}
+			seekPostSplashPosition()
+		}
+		
+		// Links start out left justified, and further to the right of the canvas.
+		// Once any link is clicked, all links right justify, and move to the left side of the canvas.
+		public function seekPostSplashPosition() {
+			if (_in_splash_position) {
+				Tweener.addTween(this, {
+					x: FV.get.nav_right_edge-width, 
+					delay: FV.get.nav_link_slide_delay_interval*_id, 
+					time: FV.get.nav_post_splash_slide_time, 
+					transition: "easeOutCubic"
+				})
+				_in_splash_position = false
 			}
 		}
 		
@@ -102,7 +119,12 @@ package com.graywhale {
 		public function adaptToScale() {
 			_bg.width = _title.textWidth
 			_bg.height = _title.textHeight
-			x = FV.get.nav_right_edge - width
+			if (_in_splash_position) {
+				x = FV.get.nav_splash_left_edge
+			} else {
+				x = FV.get.nav_right_edge - width
+			}
+			
 			y = FV.get.nav_margin_top + (_id * (height+FV.get.nav_link_margin_bottom))
 		}
 		

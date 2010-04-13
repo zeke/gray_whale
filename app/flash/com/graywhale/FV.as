@@ -30,14 +30,22 @@ package com.graywhale {
 				dot_color_1: 0x8DC63F, // green
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
+				
+				watermark_alpha: .4, 
+				watermark_appear_time: 2,
+				watermark_appear_delay: 5, 
 
 				logo_dot_radius:2,
 				logo_dot_appear_time: 1,
 				logo_dot_appear_delay_interval:.5,
 				logo_curve_appear_time: 3,
-				logo_curve_appear_delay: 0,
+				logo_curve_appear_delay: 1.5,
+				logo_curve_x: 4,
+				logo_curve_initial_x_offset: 40,
 				logo_zoomed_hangout_time: .5,
 				logo_end_zoom_time: 1,
+				logo_splash_x: 350,
+				logo_splash_y: 35,
 				logo_x: 20,
 				logo_y: 35,
 
@@ -65,6 +73,9 @@ package com.graywhale {
 				page_x_shift: 50,
 				
 				nav_margin_top: 100,
+				nav_splash_left_edge: 350,
+				nav_post_splash_slide_time: .5,
+				nav_link_slide_delay_interval: .1,
 				nav_right_edge: 308,
 				nav_link_margin_bottom: 8,
 				nav_link_text_size: 15,

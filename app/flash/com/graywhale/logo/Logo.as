@@ -22,6 +22,7 @@ package com.graywhale.logo {
 		var _curve:Curve
 		var _label:Label
 		var _capital:Capital
+		public var _in_splash_position:Boolean = true
 
 		public function Logo() {
       addEventListener(Event.ADDED_TO_STAGE, init)
@@ -31,9 +32,9 @@ package com.graywhale.logo {
 			addDots()
 			addCurve()
 
-			// This comes after dots and curve are initialized, so the  centering will look right.
+			// This comes after dots and curve are initialized, so the centering will look right.
 			scaleX = scaleY = 5
-			x = stage.stageWidth/2 - width/2
+			x = stage.stageWidth/2 - width/2 + FV.get.logo_curve_initial_x_offset
 			y = stage.stageHeight/2 - height/2
 
 			// Set up delay for ending the zoomage
@@ -48,9 +49,26 @@ package com.graywhale.logo {
      	t2.start()
     }
 
+		public function seekPostSplashPosition() {
+			if (_in_splash_position) {
+				Tweener.addTween(this, {
+					x: FV.get.logo_x,
+					y: FV.get.logo_y,
+					time: FV.get.nav_post_splash_slide_time, 
+					transition: "easeOutCubic"
+				})
+				_in_splash_position = false
+			}
+		}
 
 		private function endZoom(e:TimerEvent=null) {
-			Tweener.addTween(this, {_scale:1, x:FV.get.logo_x, y:FV.get.logo_y, time:FV.get.logo_end_zoom_time, transition:"easeInOutCubic"})
+			Tweener.addTween(this, {
+				_scale:1, 
+				x:FV.get.logo_splash_x, 
+				y:FV.get.logo_splash_y, 
+				time:FV.get.logo_end_zoom_time, 
+				transition:"easeInOutCubic"
+			})
 		}
 		
 		private function addLabelAndCapital(e:TimerEvent=null) {
@@ -62,16 +80,6 @@ package com.graywhale.logo {
 		private function addCurve() {
 			_curve = new Curve()
 			addChild(_curve)
-			
-			_curve.x = 4
-
-			_curve.alpha = 0
-			Tweener.addTween(_curve, {
-				alpha: 1, 
-				time: FV.get.logo_curve_appear_time, 
-				delay: FV.get.logo_curve_appear_delay, 
-				transition: "easeInCubic"
-			})
 		}
 		
 		private function addDots() {
