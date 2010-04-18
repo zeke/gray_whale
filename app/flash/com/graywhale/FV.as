@@ -34,6 +34,8 @@ package com.graywhale {
 				watermark_alpha: .4, 
 				watermark_appear_time: 2,
 				watermark_appear_delay: 5, 
+				watermark_y: 20,
+				watermark_x: 100,
 
 				logo_dot_radius:2,
 				logo_dot_appear_time: 1,
@@ -45,9 +47,9 @@ package com.graywhale {
 				logo_zoomed_hangout_time: .5,
 				logo_end_zoom_time: 1,
 				logo_splash_x: 350,
-				logo_splash_y: 35,
+				logo_splash_y: 95,
 				logo_x: 20,
-				logo_y: 35,
+				logo_y: 95,
 
 				logo_label_appear_time: 2,
 				logo_label_appear_delay: 0,
@@ -55,12 +57,13 @@ package com.graywhale {
 				logo_capital_appear_delay: .5,
 				
 				page_x: 400,
-				page_y: 34,
+				page_y: 94,
 				page_width: 500,
-				page_title_padding_bottom: 20,
+				page_title_padding_bottom: 40,
 				page_tagline_padding_bottom: 20,
-				page_title_color: 0x00AEEF, // blue
-				page_title_text_size: 40,
+				page_title_color_1: 0x00AEEF, // blue
+				page_title_color_2: 0x6e6f73, // grey
+				page_title_text_size: 60,
 				page_tagline_color: 0x939598, // grey
 				page_tagline_text_size: 24,
 				page_body_color: 0x9D9FA2, // grey
@@ -72,15 +75,15 @@ package com.graywhale {
 				page_blur_x: 10,
 				page_x_shift: 50,
 				
-				nav_margin_top: 100,
+				nav_margin_top: 130,
 				nav_splash_left_edge: 350,
 				nav_post_splash_slide_time: .5,
 				nav_link_slide_delay_interval: .1,
 				nav_right_edge: 308,
-				nav_link_margin_bottom: 8,
+				nav_link_margin_bottom: 7,
 				nav_link_text_size: 15,
 				nav_link_color: 0x000000,
-				nav_link_alpha_active: .9,
+				nav_link_alpha_active: .7,
 				nav_link_alpha_inactive: .4,
 				nav_link_appear_time: .5,
 				nav_link_appear_delay: 1,

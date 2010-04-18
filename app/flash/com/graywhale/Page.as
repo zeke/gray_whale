@@ -36,11 +36,24 @@ package com.graywhale {
 
     private function addTitle() {
 			var format:TextFormat = new TextFormat()
-		  format.font = new HelveticaNeueExtended().fontName
-			format.color = FV.get.page_title_color
+			format.font = new HelveticaNeueExtended().fontName
+			format.color = FV.get.page_title_color_2
 			format.size = FV.get.page_title_text_size
 			format.letterSpacing = 0
 			format.bold = false
+			
+			// var p:Object = new Object()
+			// p.color = FV.get.page_title_color_1
+			// p.size = FV.get.page_title_text_size
+			// p.letterSpacing = 0
+			// p.bold = false
+
+			var dog:Object = new Object()
+			dog.color = "#00AEEF"
+
+			// var style:StyleSheet = new StyleSheet()
+			// style.setStyle("p", p)
+			// style.setStyle("dog", dog)
 
 		  var l = _title = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
@@ -49,8 +62,15 @@ package com.graywhale {
 			l.wordWrap = false
       l.embedFonts = true
       l.width = FV.get.page_width
+			l.condenseWhite = true
 			l.defaultTextFormat = format
-			l.htmlText = _json['title']
+			// l.styleSheet = style
+	
+			var parts = _json['title'].split(" ")
+			var blue_text = "<font color='#00AEEF'>" + parts.shift() + "</font> " // snag first element off array
+			var grey_text = parts.join(" ")
+
+			l.htmlText = blue_text + grey_text
 			addChild(l)
     }
 
@@ -61,7 +81,7 @@ package com.graywhale {
 			format.size = FV.get.page_tagline_text_size
 			format.letterSpacing = 0
 			format.bold = false
-			format.leading = 4
+			format.leading = 6
 
 		  var l = _tagline = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT

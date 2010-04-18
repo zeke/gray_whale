@@ -32,10 +32,10 @@ package com.graywhale {
     }
 
 		public function adaptToScale() {
-			height = stage.stageHeight * 2
+			height = stage.stageHeight * 1.5
 			width = height * _width_to_height_ratio
-			x = stage.stageWidth/2 - width/2
-			y = -height/5
+			y = FV.get.watermark_x
+			y = FV.get.watermark_y
 		}
         
 	}
