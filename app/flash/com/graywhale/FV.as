@@ -59,7 +59,7 @@ package com.graywhale {
 				page_x: 400,
 				page_y: 94,
 				page_width: 500,
-				page_title_padding_bottom: 40,
+				page_title_padding_bottom: 35,
 				page_tagline_padding_bottom: 20,
 				page_title_color_1: 0x00AEEF, // blue
 				page_title_color_2: 0x6e6f73, // grey
@@ -75,7 +75,7 @@ package com.graywhale {
 				page_blur_x: 10,
 				page_x_shift: 50,
 				
-				nav_margin_top: 130,
+				nav_margin_top: 190,
 				nav_splash_left_edge: 350,
 				nav_post_splash_slide_time: .5,
 				nav_link_slide_delay_interval: .1,
