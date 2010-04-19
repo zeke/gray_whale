@@ -112,7 +112,8 @@ package com.graywhale {
       l.embedFonts = true
       l.width = FV.get.page_width
 			l.defaultTextFormat = format
-			l.htmlText = _json['html_body']
+			var newline:RegExp = /NEWLINE/g;  
+			l.htmlText = _json['html_body'].replace(newline, "\n")
 			addChild(l)
     }
 
@@ -139,6 +140,7 @@ package com.graywhale {
     }
 
 		public function activate(delay_page_appearance) {
+			if (_active) return
 			if (delay_page_appearance==undefined) delay_page_appearance=false
 			visible = true
 			_active = true

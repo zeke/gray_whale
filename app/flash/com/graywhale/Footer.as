@@ -49,7 +49,7 @@ package com.graywhale {
 			
 			var s3 = _stripe_3 = new Sprite()
 			s3.graphics.beginFill(FV.get.footer_stripe_3_color)
-			s3.graphics.drawRect(0, 0, stage.stageWidth, FV.get.footer_stripe_3_height)
+			s3.graphics.drawRect(0, 0, stage.stageWidth, 100) // Height depends on screen size
 			s3.graphics.endFill()
 			addChild(s3)
 		}
@@ -70,9 +70,10 @@ package com.graywhale {
 			_stripe_1.y = FV.get.footer_dot_y_range - _stripe_1.height
 			_stripe_2.y = _stripe_1.y + _stripe_1.height
 			_stripe_3.y = _stripe_2.y + _stripe_2.height
+			_stripe_3.height = stage.stageHeight - FV.get.footer_margin_top - _stripe_1.height - _stripe_2.height
 			
 			x = 0
-			y = stage.stageHeight - height + 2
+			y = FV.get.footer_margin_top
 		}
 
 	}

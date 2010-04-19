@@ -3873,3 +3873,459 @@ Processing PagesController#index to json (for 127.0.0.1 at 2010-04-18 01:58:15) 
   [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
   [4;35;1mPage Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
 Completed in 48ms (View: 4, DB: 4) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-18 23:51:53) [GET]
+  [4;35;1mPage Load (28.0ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (20.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 383ms (View: 58, DB: 49) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2010-04-18 23:52:20) [GET]
+Completed in 28ms (View: 24, DB: 0) | 401 Unauthorized [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2010-04-18 23:52:21) [GET]
+Completed in 5ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2010-04-18 23:52:27) [GET]
+Rendering template within layouts/application
+Rendering admin/login
+Completed in 140ms (View: 134, DB: 0) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-18 23:52:27) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (28.3ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.3ms)
+Rendered pages/_page (1.3ms)
+Completed in 94ms (View: 82, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-18 23:52:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPage Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.8ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (28.2ms)
+Completed in 88ms (View: 69, DB: 5) | 200 OK [http://localhost/pages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-18 23:52:53) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"1", "page"=>{"position"=>"1", "body"=>"Founded in 2007, Gray Whale uses quantitative methods\\nto identify trading opportunities, both domestically and\\ninternationally, across various financial instruments\\nincluding stocks, futures, currencies, and options.\r\nOur culture is one of disciplined risk taking\\nand continuous incremental improvement.", "title"=>"Who We Are", "tagline"=>"Gray Whale is a proprietary trading firm located in Santa Barbara, California."}}
+  [4;35;1mPage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (1.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.3ms)[0m   [0;1mUPDATE `pages` SET `updated_at` = '2010-04-19 05:52:53', `body` = 'Founded in 2007, Gray Whale uses quantitative methods\\nto identify trading opportunities, both domestically and\\ninternationally, across various financial instruments\\nincluding stocks, futures, currencies, and options.\r\nOur culture is one of disciplined risk taking\\nand continuous incremental improvement.' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 24ms (DB: 3) | 302 Found [http://localhost/pages/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-18 23:52:53) [GET]
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (100.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (107.0ms)
+Rendered pages/_page (82.3ms)
+Rendered pages/_page (1.6ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.5ms)
+Completed in 211ms (View: 99, DB: 101) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-18 23:53:06) [GET]
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-18 23:56:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (9.9ms)
+Completed in 27ms (View: 14, DB: 2) | 200 OK [http://localhost/pages/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-18 23:57:22) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"1", "page"=>{"position"=>"1", "body"=>"Founded in 2007, Gray Whale uses quantitative methods\r\nto identify trading opportunities, both domestically and\r\ninternationally, across various financial instruments\r\nnincluding stocks, futures, currencies, and options.\r\n\r\nOur culture is one of disciplined risk taking\r\nand continuous incremental improvement.", "title"=>"Who We Are", "tagline"=>"Gray Whale is a proprietary trading firm located in Santa Barbara, California."}}
+  [4;36;1mPage Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Update (0.3ms)[0m   [0mUPDATE `pages` SET `updated_at` = '2010-04-19 05:57:22', `body` = 'Founded in 2007, Gray Whale uses quantitative methods\r\nto identify trading opportunities, both domestically and\r\ninternationally, across various financial instruments\r\nnincluding stocks, futures, currencies, and options.\r\n\r\nOur culture is one of disciplined risk taking\r\nand continuous incremental improvement.' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 22ms (DB: 4) | 302 Found [http://localhost/pages/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-18 23:57:22) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (7.5ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.9ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.5ms)
+Completed in 31ms (View: 17, DB: 2) | 200 OK [http://localhost/pages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-18 23:58:22) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-18 23:58:48) [GET]
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 33ms (View: 2, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:00:39) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-19 00:01:34) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPage Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (9.4ms)
+Completed in 27ms (View: 13, DB: 2) | 200 OK [http://localhost/pages/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-19 00:02:54) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"2", "page"=>{"position"=>"2", "body"=>"Our trading is predominantly electronic, and either automated or\r\nsemi-automated. As a result, we use considerable resources to\r\ndevelop and refine our own internal proprietary trading systems.\r\n\r\nIn spite of the importance of technology, we feel that a key driver of our\r\nfirm’s success is the people who work here.  Each day we strive to\r\ninnovate, improve, and incrementally advance the capital and\r\nknowledge base of the firm.  The continued growth and success\r\nof Gray Whale is the direct result of these cumulative efforts.", "title"=>"What We Do", "tagline"=>"The trading at Gray Whale is quantitative and focuses on mathematical expectancy."}}
+  [4;35;1mPage Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.3ms)[0m   [0;1mUPDATE `pages` SET `updated_at` = '2010-04-19 06:02:54', `body` = 'Our trading is predominantly electronic, and either automated or\r\nsemi-automated. As a result, we use considerable resources to\r\ndevelop and refine our own internal proprietary trading systems.\r\n\r\nIn spite of the importance of technology, we feel that a key driver of our\r\nfirm’s success is the people who work here. Each day we strive to\r\ninnovate, improve, and incrementally advance the capital and\r\nknowledge base of the firm. The continued growth and success\r\nof Gray Whale is the direct result of these cumulative efforts.' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 22ms (DB: 3) | 302 Found [http://localhost/pages/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-19 00:02:54) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (8.4ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (2.1ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.3ms)
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-19 00:02:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (9.3ms)
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/pages/3/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-19 00:03:28) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"3", "page"=>{"position"=>"3", "body"=>"In the same way, the future success of our firm will not depend on any\r\none profitable trade but rather from the aggregation of thousands of small\r\ntrades, across a growing number of strategies and markets.\r\n\r\nWe receive continuous feedback from the market through the results of\r\neach trading decision.  By being honest and self-critical, and encouraging\r\nopen dialogue and debate, we are able to assimilate new information\r\nquickly and adapt our strategies accordingly.", "title"=>"Philosophy", "tagline"=>"Whales are among the largest animals on the planet.  However, they attain their great size gradually through the consumption of miniscule plankton."}}
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.4ms)[0m   [0;1mUPDATE `pages` SET `updated_at` = '2010-04-19 06:03:28', `body` = 'In the same way, the future success of our firm will not depend on any\r\none profitable trade but rather from the aggregation of thousands of small\r\ntrades, across a growing number of strategies and markets.\r\n\r\nWe receive continuous feedback from the market through the results of\r\neach trading decision. By being honest and self-critical, and encouraging\r\nopen dialogue and debate, we are able to assimilate new information\r\nquickly and adapt our strategies accordingly.' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 22ms (DB: 3) | 302 Found [http://localhost/pages/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-19 00:03:28) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (7.4ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (1.3ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (1.3ms)
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-19 00:03:36) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPage Columns (46.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (9.4ms)
+Completed in 72ms (View: 14, DB: 47) | 200 OK [http://localhost/pages/4/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-19 00:03:58) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"4", "page"=>{"position"=>"4", "body"=>"We pride ourselves on being a meritocracy, where\r\nresponsibility, career advancement, and compensation are\r\nrewarded based on the skills and contributions of the individual.\r\n\r\nWe are extremely selective in our hiring in order to maintain the\r\nquality and culture of the firm.  We may review hundreds of\r\nresumes in order to make a single job offer.", "title"=>"Recruiting", "tagline"=>"Our firm is actively interested in hiring talented individuals, both for positions in trading as well as technology. "}}
+  [4;35;1mPage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.3ms)[0m   [0;1mUPDATE `pages` SET `updated_at` = '2010-04-19 06:03:58', `body` = 'We pride ourselves on being a meritocracy, where\r\nresponsibility, career advancement, and compensation are\r\nrewarded based on the skills and contributions of the individual.\r\n\r\nWe are extremely selective in our hiring in order to maintain the\r\nquality and culture of the firm. We may review hundreds of\r\nresumes in order to make a single job offer.' WHERE `id` = 4[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 21ms (DB: 3) | 302 Found [http://localhost/pages/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-19 00:03:58) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (7.1ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.7ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (1.3ms)
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#edit (for 127.0.0.1 at 2010-04-19 00:04:07) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPage Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering pages/edit
+Rendered pages/_form (9.0ms)
+Completed in 102ms (View: 13, DB: 2) | 200 OK [http://localhost/pages/5/edit]
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#update (for 127.0.0.1 at 2010-04-19 00:04:14) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"4kl7ojfq8Jxmd3iBrCN4kp7R2Se9hh1wmA1isdgjGRQ=", "id"=>"5", "page"=>{"position"=>"5", "body"=>"27 W Anapamu no.138\r\nSanta Barbara, CA 93101\r\n\r\n805-889-9988 \r\n\r\ntrameson@graywhalecapital.com\r\nmchallen@graywhalecapital.com", "title"=>"Contact", "tagline"=>""}}
+  [4;35;1mPage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.3ms)[0m   [0;1mUPDATE `pages` SET `updated_at` = '2010-04-19 06:04:14', `body` = '27 W Anapamu no.138\r\nSanta Barbara, CA 93101\r\n\r\n805-889-9988 \r\n\r\ntrameson@graywhalecapital.com\r\nmchallen@graywhalecapital.com' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 21ms (DB: 4) | 302 Found [http://localhost/pages/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-19 00:04:14) [GET]
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Rendered pages/_page (7.1ms)
+Rendered pages/_page (1.4ms)
+Rendered pages/_page (1.5ms)
+Rendered pages/_page (1.7ms)
+Rendered pages/_page (1.4ms)
+Completed in 30ms (View: 17, DB: 2) | 200 OK [http://localhost/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:10:16) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:13:30) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 68ms (View: 64, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:13:30) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:15:57) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 27ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:16:10) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 25ms (View: 1, DB: 3) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:16:25) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:17:11) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:17:11) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:18:49) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 27ms (View: 1, DB: 3) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:18:53) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:18:53) [GET]
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 38ms (View: 1, DB: 4) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:22:05) [GET]
+  [4;35;1mPage Load (2.5ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 27ms (View: 1, DB: 4) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:22:10) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:22:10) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 25ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:23:36) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:23:43) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:23:44) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 112ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:25:29) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:25:55) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (2.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:25:59) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 9ms (View: 4, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:26:00) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:28:02) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 24ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2010-04-19 00:28:06) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2010-04-19 00:28:07) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 26ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]

@@ -31,11 +31,11 @@ package com.graywhale {
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
 				
-				watermark_alpha: .4, 
+				watermark_alpha: .3, 
 				watermark_appear_time: 2,
 				watermark_appear_delay: 5, 
-				watermark_y: 20,
-				watermark_x: 100,
+				watermark_x: 140,
+				watermark_y: 40,
 
 				logo_dot_radius:2,
 				logo_dot_appear_time: 1,
@@ -47,9 +47,9 @@ package com.graywhale {
 				logo_zoomed_hangout_time: .5,
 				logo_end_zoom_time: 1,
 				logo_splash_x: 350,
-				logo_splash_y: 95,
-				logo_x: 20,
-				logo_y: 95,
+				logo_splash_y: 145,
+				logo_x: 40,
+				logo_y: 145,
 
 				logo_label_appear_time: 2,
 				logo_label_appear_delay: 0,
@@ -57,7 +57,7 @@ package com.graywhale {
 				logo_capital_appear_delay: .5,
 				
 				page_x: 400,
-				page_y: 94,
+				page_y: 144,
 				page_width: 500,
 				page_title_padding_bottom: 35,
 				page_tagline_padding_bottom: 20,
@@ -72,14 +72,14 @@ package com.graywhale {
 				page_appear_time: 1,
 				page_disappear_time: .3,
 				page_blur_x: 15,
-				page_blur_x: 10,
+				page_blur_y: 5,
 				page_x_shift: 50,
 				
-				nav_margin_top: 190,
+				nav_margin_top: 230,
 				nav_splash_left_edge: 350,
 				nav_post_splash_slide_time: .5,
 				nav_link_slide_delay_interval: .1,
-				nav_right_edge: 308,
+				nav_right_edge: 328,
 				nav_link_margin_bottom: 7,
 				nav_link_text_size: 15,
 				nav_link_color: 0x000000,
@@ -88,7 +88,8 @@ package com.graywhale {
 				nav_link_appear_time: .5,
 				nav_link_appear_delay: 1,
 				nav_link_appear_delay_interval: .3,
-				
+
+				footer_margin_top: 580,
 				footer_dot_count: 15,
 				footer_dot_radius: 3,
 				footer_dot_y_range: 50,
@@ -101,8 +102,7 @@ package com.graywhale {
 				footer_stripe_1_height: 30,
 				footer_stripe_2_color: 0xCCCCCC,
 				footer_stripe_2_height: 15,
-				footer_stripe_3_color: 0xAAAAAA,
-				footer_stripe_3_height: 20
+				footer_stripe_3_color: 0xAAAAAA
       }
 
       var temp:Object = [];

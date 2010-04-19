@@ -7,7 +7,7 @@ class Page < ActiveRecord::Base
   include ActionView::Helpers::UrlHelper
 
   def html_body
-    auto_link(self.body)
+    auto_link(self.body).gsub("\r\n", "NEWLINE")
   end
   
 end
