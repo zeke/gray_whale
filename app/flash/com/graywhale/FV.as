@@ -31,7 +31,7 @@ package com.graywhale {
 				dot_color_2: 0x00AEEF, // blue
 				dot_color_3: 0xF68B1F, // orange
 				
-				watermark_alpha: .3, 
+				watermark_alpha: 1, 
 				watermark_appear_time: 3,
 				watermark_appear_delay: 5.5, 
 				watermark_x: 140,
@@ -98,11 +98,11 @@ package com.graywhale {
 				footer_y_target_update_probability: 30,
 				footer_dot_y_transition_time_min: 3,
 				footer_dot_y_transition_time_max: 5,
-				footer_stripe_1_color: 0xDFDFDF,
+				footer_stripe_1_color: 0xEEF2F2,
 				footer_stripe_1_height: 30,
-				footer_stripe_2_color: 0xCCCCCC,
-				footer_stripe_2_height: 15,
-				footer_stripe_3_color: 0xAAAAAA
+				footer_stripe_2_color: 0xDEE0E1,
+				footer_stripe_2_height: 30,
+				footer_stripe_3_color: 0xC5C8C8
       }
 
       var temp:Object = [];
