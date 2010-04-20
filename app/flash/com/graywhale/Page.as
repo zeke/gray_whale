@@ -57,7 +57,7 @@ package com.graywhale {
 
 		  var l = _title = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
-		  l.selectable = true
+		  l.selectable = false
 			l.multiline = false
 			l.wordWrap = false
       l.embedFonts = true
@@ -85,7 +85,8 @@ package com.graywhale {
 
 		  var l = _tagline = new TextField()
       l.autoSize = TextFieldAutoSize.LEFT
-		  l.selectable = true
+		  l.selectable = false
+			l.condenseWhite = true
 			l.multiline = true
 			l.wordWrap = true
       l.embedFonts = true

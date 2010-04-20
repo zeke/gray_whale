@@ -16,6 +16,7 @@ package com.graywhale {
 		public var _title
 		public var _active:Boolean = false
 		public var _in_splash_position:Boolean = true
+		public var _ready:Boolean = false
 		
 		public function NavLink(id, json) {
 			name = "page_" + id
@@ -69,15 +70,15 @@ package com.graywhale {
     }
 
 		private function rollOverHandler(event:SimpleMouseEvent):void {
-			emphasize()
+			if (_ready) emphasize()
 		}
 
 		private function rollOutHandler(event:SimpleMouseEvent):void {			
-			if (!_active) deemphasize()
+			if (_ready && !_active) deEmphasize()
 		}
 
 		private function releaseHandler(event:SimpleMouseEvent):void {
-			Graywhale(this.parent).showPage(_id)
+			if (_ready) Graywhale(this.parent).showPage(_id)
 		}
 
 		public function activate() {
@@ -89,7 +90,7 @@ package com.graywhale {
 		public function deactivate() {
 			if (_active) {
 				_active = false
-				deemphasize()
+				deEmphasize()
 			}
 			seekPostSplashPosition()
 		}
@@ -112,7 +113,7 @@ package com.graywhale {
       Tweener.addTween(this, {alpha:FV.get.nav_link_alpha_active, time:0, transition:"linear"})
 		}
 		
-		public function deemphasize() {
+		public function deEmphasize() {
       Tweener.addTween(this, {alpha:FV.get.nav_link_alpha_inactive, time:.75, transition:"linear"})
 		}
 
@@ -134,8 +135,14 @@ package com.graywhale {
 				alpha: FV.get.nav_link_alpha_inactive, 
 				time: FV.get.nav_link_appear_time,
 				transition: "easeInCubic",
-				delay: (_id * FV.get.nav_link_appear_delay_interval) + FV.get.nav_link_appear_delay
+				delay: (_id * FV.get.nav_link_appear_delay_interval) + FV.get.nav_link_appear_delay,
+				onComplete: ready				
 			})			
+		}
+		
+		// Prevent NavLink from being rolled over before it's even appeared.
+		private function ready() {
+			_ready = true
 		}
 
 	}
