@@ -59,7 +59,7 @@ package com.graywhale {
 				page_x: 400,
 				page_y: 144,
 				page_width: 500,
-				page_title_padding_bottom: 20,
+				page_title_padding_bottom: 22,
 				page_tagline_padding_bottom: 20,
 				page_title_color_1: 0x00AEEF, // blue
 				page_title_color_2: 0x6e6f73, // grey
