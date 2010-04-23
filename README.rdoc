@@ -1,1 +1,1 @@
-Source code for [graywhalecapital.com]{http://graywhalecapital.com}
+Source code for {graywhalecapital.com}[http://graywhalecapital.com]
