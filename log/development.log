@@ -4616,3 +4616,120 @@ Processing PagesController#index to json (for 127.0.0.1 at 2010-04-20 12:41:55) 
   [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` ORDER BY position[0m
   [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
 Completed in 23ms (View: 1, DB: 2) | 200 OK [http://localhost/pages.json]
+/!\ FAILSAFE /!\  Mon Dec 10 18:44:31 -0800 2012
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:182:in `require'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:182:in `require'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:182:in `require'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activesupport-2.3.11/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/mysql_adapter.rb:61:in `mysql_connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/haml-3.1.7/vendor/sass/lib/sass/../sass/plugin/rack.rb:54:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/urlmap.rb:47:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `each'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/urlmap.rb:41:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/handler/webrick.rb:48:in `service'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rack-1.1.3/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/zeke/.rvm/gems/ruby-1.8.7-p358/gems/rails-2.3.11/lib/commands/server.rb:111
+    script/server:3:in `require'
+    script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2012-12-10 18:51:36) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2012-12-10 18:51:36) [GET]
+  [4;36;1mPage Load (0.0ms)[0m   [0;1mPG::Error: ERROR: relation "pages" does not exist
+LINE 1: SELECT * FROM "pages" ORDER BY position
+ ^
+: SELECT * FROM "pages" ORDER BY position[0m
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "pages" does not exist
+LINE 1: SELECT * FROM "pages"  ORDER BY position
+                      ^
+: SELECT * FROM "pages"  ORDER BY position):
+  app/controllers/pages_controller.rb:35:in `index'
+  haml (3.1.7) vendor/sass/lib/sass/./sass/plugin/rack.rb:54:in `call'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/zeke/.rvm/rubies/ruby-1.8.7-p358/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StaticController#index (for 127.0.0.1 at 2012-12-10 18:55:29) [GET]
+Rendering template within layouts/flash
+Rendering static/index
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PagesController#index to json (for 127.0.0.1 at 2012-12-10 18:55:29) [GET]
+  [4;36;1mPage Load (3.9ms)[0m   [0;1mSELECT * FROM "pages" ORDER BY position[0m
+Completed in 79ms (View: 1, DB: 4) | 200 OK [http://localhost/pages.json]
